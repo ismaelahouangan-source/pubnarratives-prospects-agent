@@ -33,10 +33,10 @@ jobs:
       - name: Exécuter la génération des scripts
         env:
           GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
-          GEMINI_MODEL: 'gemini-2.5-flash'
+          GEMINI_MODEL: 'gemini-3.8-flash'
           INDEX_START: ${{ github.event.inputs.index_start }}
           INDEX_END: ${{ github.event.inputs.index_end }}
-          PROSPECTS_CSV: 'annuaire_prospects.xlsx'
+          PROSPECTS_CSV: 'Annuaire_300_Prospects.csv'
         run: python agent_scripts.py
 
       - name: Télécharger les scripts en Artifact ZIP
